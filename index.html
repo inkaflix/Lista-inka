@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyecto - Lista (tipo Excel)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mi Lista - Proyecto</h1>
+      <div id="user-area">
+        <button id="btn-show-login">Iniciar Sesión / Registro</button>
+        <button id="btn-logout" style="display:none">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="auth-panel" class="card">
+        <div class="forms">
+          <div class="form-block">
+            <h3>Registro</h3>
+            <input id="reg-username" placeholder="Usuario" />
+            <input id="reg-password" type="password" placeholder="Contraseña" />
+            <button id="btn-register">Registrar</button>
+            <div class="msg" id="reg-msg"></div>
+          </div>
+          <div class="form-block">
+            <h3>Login</h3>
+            <input id="login-username" placeholder="Usuario" />
+            <input id="login-password" type="password" placeholder="Contraseña" />
+            <button id="btn-login">Entrar</button>
+            <div class="msg" id="login-msg"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="app-section" style="display:none">
+        <div class="card">
+          <div class="toolbar">
+            <input id="new-title" placeholder="Nombre del proyecto / anime..." />
+            <input id="new-seasons" placeholder="Temporadas" style="width:110px"/>
+            <input id="new-episodes" placeholder="Episodios" style="width:110px"/>
+            <label><input type="checkbox" id="new-watched" /> Visto</label>
+            <button id="btn-add">Agregar</button>
+            <button id="btn-export">Exportar JSON</button>
+          </div>
+
+          <div id="table-wrap">
+            <table id="list-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Temporadas</th>
+                  <th>Episodios</th>
+                  <th>Visto</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="list-body">
+                <!-- filas generadas -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
