@@ -1,7 +1,7 @@
 
 
 // app.js - frontend logic
-const base = 'localhost:43771'; // si sirves en /, funciona; si no, ajusta la URL base
+const base = 'https://listainka.netlify.app'; // si sirves en /, funciona; si no, ajusta la URL base
 const $ = id => document.getElementById(id);
 
 let token = localStorage.getItem('token') || null;
